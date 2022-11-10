@@ -7,6 +7,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
     node: true,
   },
   parser: "@typescript-eslint/parser",
@@ -24,12 +25,13 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:react-hooks/recommended",
+    "plugin:jest/recommended",
     "airbnb",
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:@docusaurus/all",
   ],
-  plugins: ["react-hooks", "@typescript-eslint", "@docusaurus"],
+  plugins: ["react-hooks", "jest", "@typescript-eslint", "@docusaurus"],
   rules: {
     "@typescript-eslint/no-explicit-any": OFF,
     "@typescript-eslint/no-non-null-assertion": OFF,

@@ -1,0 +1,16 @@
+.yarn
+.docusaurus
+.husky
+.nvmrc
+.npmignore
+.gitignore
+.eslintignore
+.pnp.cjs
+.pnp.loader.mjs
+.prettierignore
+.stylelintignore
+.gitkeep
+build
+dist
+yarn.lock
+LICENSE

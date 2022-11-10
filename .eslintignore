@@ -1,0 +1,6 @@
+.yarn
+.docusaurus
+.pnp.cjs
+.pnp.loader.mjs
+build
+dist

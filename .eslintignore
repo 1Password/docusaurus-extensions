@@ -4,3 +4,9 @@
 .pnp.loader.mjs
 build
 dist
+
+packages/jest-docusaurus/config.js
+packages/jest-docusaurus/config.d.ts
+packages/jest-docusaurus/plugin.js
+packages/jest-docusaurus/plugin.d.ts
+packages/jest-docusaurus/matchers

@@ -14,3 +14,9 @@ build
 dist
 yarn.lock
 LICENSE
+
+packages/jest-docusaurus/config.js
+packages/jest-docusaurus/config.d.ts
+packages/jest-docusaurus/plugin.js
+packages/jest-docusaurus/plugin.d.ts
+packages/jest-docusaurus/matchers

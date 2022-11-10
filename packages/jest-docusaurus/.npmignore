@@ -1,0 +1,4 @@
+.tsbuildinfo*
+tsconfig*
+src/
+!src/types.d.ts

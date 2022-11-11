@@ -38,6 +38,9 @@ export default async (): Promise<Config.InitialOptions> => {
   const createProjectConfig = await prepareProjectConfig();
 
   return {
-    projects: [createProjectConfig("jest-docusaurus")],
+    projects: [
+      createProjectConfig("jest-docusaurus"),
+      createProjectConfig("docusaurus-plugin-stored-data"),
+    ],
   };
 };

@@ -1,0 +1,35 @@
+import DevBlogPosts from "@theme/DevBlogPosts";
+import OpRepos from "@theme/OpRepos";
+import CodeBlock from "@theme/CodeBlock";
+import useStoredData from "@theme/useStoredData";
+
+# Stored Data
+
+:::info
+
+This page demonstrates usage of the `@1password/docusaurus-plugin-stored-data` plugin. It is used to consume data from both local and external sources and make it available via React hooks. Refer to the [package's README](https://github.com/1Password/docusaurus-extensions/blob/main/packages/docusaurus-plugin-stored-data) for detailed usage instructions.
+
+:::
+
+### RSS feed
+
+This example configures the plugin to consume an RSS feed and then uses the `useStoredFeed` hook in a custom component to parse and render individual feed items.
+
+<DevBlogPosts />
+
+### Stored code snippet
+
+This example configures the plugin to consume an external [code snippet from GitHub](https://github.com/1Password/arboard/blob/master/examples/get_image.rs) and then uses the `useStoredData` hook right in the MDX file to print the result into a `<CodeBlock>` component.
+
+<CodeBlock
+  language="rust"
+  title="/arboard/master/examples/get_image.rs"
+  showLineNumbers>
+  {useStoredData("arboard-get-image")}
+</CodeBlock>
+
+### Local files
+
+This example configures the plugin to consume the contents of a local JSON file containing a list of 1Password repositories and then uses the `useStoredJson` hook in a custom component to parse and render each repo.
+
+<OpRepos />

@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "references": [{ "path": "./tsconfig.client.json" }],
+  "compilerOptions": {
+    "noEmit": false,
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src"],
+  "exclude": ["src/theme"]
+}

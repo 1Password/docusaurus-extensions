@@ -1,15 +1,12 @@
-// TODO: undo all comments once /website project is ready
-
 /* eslint-disable import/no-dynamic-require, global-require, @typescript-eslint/no-var-requires */
-// import { createConfig } from "@1password/jest-docusaurus/config";
+import { createConfig } from "@1password/jest-docusaurus/config";
 import type { Config } from "@jest/types";
-// import { resolve } from "path";
+import { resolve } from "path";
 
-// eslint-disable-next-line arrow-body-style
 const prepareProjectConfig = async () => {
-  // const docusaurusConfig = await createConfig({
-  //   siteDir: resolve(__dirname, "./website"),
-  // });
+  const docusaurusConfig = await createConfig({
+    siteDir: resolve(__dirname, "./website"),
+  });
 
   return (project: string): Config.InitialOptions => {
     const pckg = require(`./packages/${project}/package.json`);
@@ -25,7 +22,7 @@ const prepareProjectConfig = async () => {
       moduleNameMapper: {
         "^.+\\.(jpg|jpeg|png|svg)$": "<rootDir>/fileMock.js",
         "^.+\\.(css|scss)$": "identity-obj-proxy",
-        // ...docusaurusConfig.moduleNameMapper,
+        ...docusaurusConfig.moduleNameMapper,
       },
       globals: {
         "ts-jest": {

@@ -3,9 +3,8 @@
 node_modules
 dist
 
+.pnp.*
 .yarn/*
-**/.yarn/*
-!.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases

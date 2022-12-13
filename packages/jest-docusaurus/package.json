@@ -1,0 +1,41 @@
+{
+  "name": "@1password/jest-docusaurus",
+  "description": "Jest helpers for developing with Docusaurus",
+  "version": "0.1.0",
+  "author": "1Password <support@1password.com>",
+  "repository": {
+    "url": "https://github.com/1Password/docusaurus-extensions.git",
+    "type": "git",
+    "directory": "packages/jest-docusaurus"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.14"
+  },
+  "main": "config.js",
+  "types": "src/types.d.ts",
+  "scripts": {
+    "build": "yarn clean && tsc -p tsconfig.build.json",
+    "clean": "rimraf .tsbuildinfo config.js config.d.ts react.js react.d.ts plugin.js plugin.d.ts matchers",
+    "typecheck": "tsc -p tsconfig.build.json --noEmit",
+    "watch": "tsc --build --watch --preserveWatchOutput"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^2.2.0"
+  },
+  "devDependencies": {
+    "@docusaurus/theme-classic": "^2.2.0",
+    "@docusaurus/types": "^2.2.0",
+    "@jest/types": "^28.1.3",
+    "@types/jest": "^28.1.8",
+    "@types/react": "^18.0.25",
+    "@types/react-router-dom": "^5.3.3",
+    "rimraf": "^3.0.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^16.8.4 || ^17.0.0"
+  }
+}

@@ -9,9 +9,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 16
-      - run: exit 0
-      # - run: yarn
-      # - run: yarn build:packages
-      # - run: yarn lint:all
-      # - run: yarn format:diff
-      # - run: yarn test
+      - run: yarn
+      - run: yarn build:packages
+      # TODO: change to lint:all once stylesheets are present
+      - run: yarn lint:scripts
+      - run: yarn format:diff
+      - run: yarn test

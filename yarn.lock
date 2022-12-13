@@ -1396,10 +1396,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^16.14.0":
-  version: 16.18.3
-  resolution: "@types/node@npm:16.18.3"
-  checksum: 6b8ba2ea5d842f7986e366cb9184c54d273d492784dc62e08fd5afeae938d9b61aec6e4222d2541cd18f9b1412ba361bbcb3f4204fb003608af80a2a6af959f9
+"@types/node@npm:^18.11.14":
+  version: 18.11.14
+  resolution: "@types/node@npm:18.11.14"
+  checksum: 1effaf6d55bbcccde9bca763e6454ebf92047726450256ccc0673bf44e4661fbddcd788b0779bad8a13809b05a7bdcbfba81db0713235478b866d553be864be9
   languageName: node
   linkType: hard
 
@@ -2908,7 +2908,7 @@ __metadata:
   dependencies:
     "@docusaurus/eslint-plugin": ^2.2.0
     "@types/eslint": ^7.29.0
-    "@types/node": ^16.14.0
+    "@types/node": ^18.11.14
     "@types/prettier": ^2.7.1
     "@typescript-eslint/eslint-plugin": ^5.42.1
     "@typescript-eslint/parser": ^5.42.1

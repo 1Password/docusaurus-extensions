@@ -1,0 +1,119 @@
+{
+  "name": "docusaurus-extensions",
+  "description": "A collection of Docusaurus extensions",
+  "version": "0.1.0",
+  "author": "1Password <support@1password.com>",
+  "repository": "1password/docusaurus-extensions.git",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=16.14"
+  },
+  "workspaces": [
+    "packages/*",
+    "website"
+  ],
+  "scripts": {
+    "build:all": "yarn workspaces foreach -pt run build",
+    "build:package": "yarn workspace @1password/${0} build",
+    "build:packages": "yarn workspaces foreach -p --exclude website run build",
+    "build:website": "yarn workspace website build",
+    "clean": "yarn workspaces foreach -pt run clean",
+    "dev": "yarn build:packages && yarn concurrently \"yarn workspace @1password/${0} watch\" \"yarn workspace website start\"",
+    "format:diff": "prettier --list-different .",
+    "format:write": "prettier --write .",
+    "lint:all": "yarn lint:scripts && yarn lint:styles",
+    "lint:scripts": "eslint --cache \"**/*.{js,jsx,ts,tsx}\"",
+    "lint:styles": "stylelint \"**/*.{scss,css}\"",
+    "postinstall": "husky install",
+    "syncpack": "syncpack format && syncpack fix-mismatches",
+    "typecheck": "yarn workspaces foreach -pt run typecheck"
+  },
+  "devDependencies": {
+    "@docusaurus/eslint-plugin": "^2.2.0",
+    "@types/eslint": "^7.29.0",
+    "@types/node": "^16.14.0",
+    "@types/prettier": "^2.7.1",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "concurrently": "^7.5.0",
+    "eslint": "^8.27.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.2",
+    "lerna": "^5.6.2",
+    "lint-staged": "^13.0.3",
+    "nx": "^14.8.6",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.2.0",
+    "stylelint": "^14.14.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-standard": "^26.0.0",
+    "syncpack": "^8.3.9",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier --write"
+    ],
+    "**/package.json": [
+      "yarn syncpack"
+    ],
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "**/*.{scss,css}": [
+      "stylelint --fix"
+    ]
+  },
+  "packageManager": "yarn@3.2.2",
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^16.8.4 || ^17.0.0"
+  },
+  "syncpack": {
+    "workspace": false,
+    "sortFirst": [
+      "name",
+      "description",
+      "version",
+      "author",
+      "repository",
+      "license",
+      "private",
+      "engines",
+      "main",
+      "types",
+      "files",
+      "workspaces",
+      "scripts"
+    ],
+    "versionGroups": [
+      {
+        "dependencies": [
+          "react",
+          "react-dom",
+          "@1password/*"
+        ],
+        "packages": [
+          "website"
+        ]
+      },
+      {
+        "dependencies": [
+          "react",
+          "react-dom",
+          "@docusaurus/*"
+        ],
+        "packages": [
+          "packages/*"
+        ]
+      }
+    ]
+  }
+}

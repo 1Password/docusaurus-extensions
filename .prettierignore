@@ -10,10 +10,15 @@
 .prettierignore
 .stylelintignore
 .gitkeep
+.nojekyll
 build
 dist
 yarn.lock
 LICENSE
+
+*.png
+*.ico
+*.svg
 
 packages/jest-docusaurus/config.js
 packages/jest-docusaurus/config.d.ts

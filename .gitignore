@@ -17,6 +17,7 @@ package-lock.json
 website/build
 website/.docusaurus
 website/.cache-loader
+website/.yarn
 
 .eslintcache
 

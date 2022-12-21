@@ -11,7 +11,6 @@ jobs:
           node-version: 16
       - run: yarn
       - run: yarn build:packages
-      # TODO: change to lint:all once stylesheets are present
-      - run: yarn lint:scripts
+      - run: yarn lint:all
       - run: yarn format:diff
       - run: yarn test

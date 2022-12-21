@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const { resolve } = require("path");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -16,7 +17,21 @@ const config = {
   organizationName: "1password",
   projectName: "docusaurus-plugins",
 
-  plugins: [],
+  plugins: [
+    [
+      "@1password/docusaurus-plugin-stored-data",
+      /** @type {import('@1password/docusaurus-plugin-stored-data').Options} */
+      ({
+        data: {
+          "op-dev-blog":
+            "https://blog.1password.com/categories/developers/index.xml",
+          "arboard-get-image":
+            "https://raw.githubusercontent.com/1Password/arboard/master/examples/get_image.rs",
+          "op-repos": resolve(__dirname, "static", "repos.json"),
+        },
+      }),
+    ],
+  ],
 
   i18n: {
     defaultLocale: "en",
@@ -68,6 +83,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ["rust"],
       },
     }),
 };

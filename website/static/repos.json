@@ -1,0 +1,32 @@
+[
+  {
+    "name": "onepassword-operator",
+    "language": "Go",
+    "url": "https://github.com/1Password/onepassword-operator"
+  },
+  {
+    "name": "connect-sdk-js",
+    "language": "TypeScript",
+    "url": "https://github.com/1Password/connect-sdk-js"
+  },
+  {
+    "name": "connect-helm-charts",
+    "language": "Smarty",
+    "url": "https://github.com/1Password/connect-helm-charts"
+  },
+  {
+    "name": "sys-locale",
+    "language": "Rust",
+    "url": "https://github.com/1Password/sys-locale"
+  },
+  {
+    "name": "arboard",
+    "language": "Rust",
+    "url": "https://github.com/1Password/arboard"
+  },
+  {
+    "name": "scim-examples ",
+    "language": "HCL",
+    "url": "https://github.com/1Password/scim-examples"
+  }
+]

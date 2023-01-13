@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "composite": true,
+    "tsBuildInfoFile": "./dist/.tsbuildinfo-client",
+    "module": "esnext",
+    "target": "esnext",
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src/theme", "src/*.d.ts"]
+}

@@ -1642,16 +1642,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime-corejs3@npm:^7.10.2":
-  version: 7.18.9
-  resolution: "@babel/runtime-corejs3@npm:7.18.9"
-  dependencies:
-    core-js-pure: ^3.20.2
-    regenerator-runtime: ^0.13.4
-  checksum: 249158b660ac996fa4f4b0d1ab5810db060af40fac4d0bb5da23f55539a151313ae254aa64afc2ab7000d95167824e21a689f74bc24b36fd0f5ca030d522133d
-  languageName: node
-  linkType: hard
-
 "@babel/runtime-corejs3@npm:^7.18.6":
   version: 7.20.1
   resolution: "@babel/runtime-corejs3@npm:7.20.1"
@@ -1671,12 +1661,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.18.9":
+"@babel/runtime@npm:^7.10.2":
   version: 7.18.9
   resolution: "@babel/runtime@npm:7.18.9"
   dependencies:
     regenerator-runtime: ^0.13.4
   checksum: 36dd736baba7164e82b3cc9d43e081f0cb2d05ff867ad39cac515d99546cee75b7f782018b02a3dcf5f2ef3d27f319faa68965fdfec49d4912c60c6002353a2e
+  languageName: node
+  linkType: hard
+
+"@babel/runtime@npm:^7.20.7":
+  version: 7.21.0
+  resolution: "@babel/runtime@npm:7.21.0"
+  dependencies:
+    regenerator-runtime: ^0.13.11
+  checksum: 7b33e25bfa9e0e1b9e8828bb61b2d32bdd46b41b07ba7cb43319ad08efc6fda8eb89445193e67d6541814627df0ca59122c0ea795e412b99c5183a0540d338ab
   languageName: node
   linkType: hard
 
@@ -5698,17 +5697,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aria-query@npm:^4.2.2":
-  version: 4.2.2
-  resolution: "aria-query@npm:4.2.2"
-  dependencies:
-    "@babel/runtime": ^7.10.2
-    "@babel/runtime-corejs3": ^7.10.2
-  checksum: 38401a9a400f26f3dcc24b84997461a16b32869a9893d323602bed8da40a8bcc0243b8d2880e942249a1496cea7a7de769e93d21c0baa439f01e1ee936fed665
-  languageName: node
-  linkType: hard
-
-"aria-query@npm:^5.0.0":
+"aria-query@npm:^5.0.0, aria-query@npm:^5.1.3":
   version: 5.1.3
   resolution: "aria-query@npm:5.1.3"
   dependencies:
@@ -5896,10 +5885,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axe-core@npm:^4.4.3":
-  version: 4.4.3
-  resolution: "axe-core@npm:4.4.3"
-  checksum: c3ea000d9ace3ba0bc747c8feafc24b0de62a0f7d93021d0f77b19c73fca15341843510f6170da563d51535d6cfb7a46c5fc0ea36170549dbb44b170208450a2
+"axe-core@npm:^4.6.2":
+  version: 4.6.3
+  resolution: "axe-core@npm:4.6.3"
+  checksum: d0c46be92b9707c48b88a53cd5f471b155a2bfc8bf6beffb514ecd14e30b4863e340b5fc4f496d82a3c562048088c1f3ff5b93b9b3b026cb9c3bfacfd535da10
   languageName: node
   linkType: hard
 
@@ -5923,10 +5912,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axobject-query@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "axobject-query@npm:2.2.0"
-  checksum: 96b8c7d807ca525f41ad9b286186e2089b561ba63a6d36c3e7d73dc08150714660995c7ad19cda05784458446a0793b45246db45894631e13853f48c1aa3117f
+"axobject-query@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "axobject-query@npm:3.1.1"
+  dependencies:
+    deep-equal: ^2.0.5
+  checksum: c12a5da10dc7bab75e1cda9b6a3b5fcf10eba426ddf1a17b71ef65a434ed707ede7d1c4f013ba1609e970bc8c0cddac01365080d376204314e9b294719acd8a5
   languageName: node
   linkType: hard
 
@@ -7297,13 +7288,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js-pure@npm:^3.20.2":
-  version: 3.24.1
-  resolution: "core-js-pure@npm:3.24.1"
-  checksum: 4b8990a65c58e2320ff607f6168656fdcbfb4f60bd4af0ce7b09f5c0e0099b0cfc2632836986cfcb11f6ffe7ea46a5b8679651bc83ca3f41690f5ef7472d6f33
-  languageName: node
-  linkType: hard
-
 "core-js-pure@npm:^3.25.1":
   version: 3.26.0
   resolution: "core-js-pure@npm:3.26.0"
@@ -8669,25 +8653,28 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-jsx-a11y@npm:^6.6.1":
-  version: 6.6.1
-  resolution: "eslint-plugin-jsx-a11y@npm:6.6.1"
+  version: 6.7.1
+  resolution: "eslint-plugin-jsx-a11y@npm:6.7.1"
   dependencies:
-    "@babel/runtime": ^7.18.9
-    aria-query: ^4.2.2
-    array-includes: ^3.1.5
+    "@babel/runtime": ^7.20.7
+    aria-query: ^5.1.3
+    array-includes: ^3.1.6
+    array.prototype.flatmap: ^1.3.1
     ast-types-flow: ^0.0.7
-    axe-core: ^4.4.3
-    axobject-query: ^2.2.0
+    axe-core: ^4.6.2
+    axobject-query: ^3.1.1
     damerau-levenshtein: ^1.0.8
     emoji-regex: ^9.2.2
     has: ^1.0.3
-    jsx-ast-utils: ^3.3.2
-    language-tags: ^1.0.5
+    jsx-ast-utils: ^3.3.3
+    language-tags: =1.0.5
     minimatch: ^3.1.2
+    object.entries: ^1.1.6
+    object.fromentries: ^2.0.6
     semver: ^6.3.0
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
-  checksum: baae7377f0e25a0cc9b34dc333a3dc6ead9ee8365e445451eff554c3ca267a0a6cb88127fe90395c578ab1b92cfed246aef7dc8d2b48b603389e10181799e144
+  checksum: f166dd5fe7257c7b891c6692e6a3ede6f237a14043ae3d97581daf318fc5833ddc6b4871aa34ab7656187430170500f6d806895747ea17ecdf8231a666c3c2fd
   languageName: node
   linkType: hard
 
@@ -12113,7 +12100,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsx-ast-utils@npm:^2.4.1 || ^3.0.0, jsx-ast-utils@npm:^3.3.2":
+"jsx-ast-utils@npm:^2.4.1 || ^3.0.0, jsx-ast-utils@npm:^3.3.3":
   version: 3.3.3
   resolution: "jsx-ast-utils@npm:3.3.3"
   dependencies:
@@ -12181,7 +12168,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"language-tags@npm:^1.0.5":
+"language-tags@npm:=1.0.5":
   version: 1.0.5
   resolution: "language-tags@npm:1.0.5"
   dependencies:
@@ -15606,6 +15593,13 @@ __metadata:
   version: 0.13.10
   resolution: "regenerator-runtime@npm:0.13.10"
   checksum: 09893f5a9e82932642d9a999716b6c626dc53ef2a01307c952ebbf8e011802360163a37c304c18a6c358548be5a72b448e37209954a18696f21e438c81cbb4b9
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.13.11":
+  version: 0.13.11
+  resolution: "regenerator-runtime@npm:0.13.11"
+  checksum: 27481628d22a1c4e3ff551096a683b424242a216fee44685467307f14d58020af1e19660bf2e26064de946bad7eff28950eae9f8209d55723e2d9351e632bbb4
   languageName: node
   linkType: hard
 

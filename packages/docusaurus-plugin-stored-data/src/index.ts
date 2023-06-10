@@ -48,9 +48,14 @@ const httpsPromise = (
 const getData = async (location: string): Promise<string> => {
   try {
     new URL(location); // will throw if invalid URL
-
-    const response = await httpsPromise(location);
-    return response.body;
+    if (validatingURLusingRegex(location)){
+      const response = await httpsPromise(location);
+      return response.body;
+    }
+    else{
+      throw "Location URI is not in the proper format";
+    }
+    
   } catch (error) {
     // If it's just an invalid URL, let it fall through to check if it's a file
     if (
@@ -78,6 +83,16 @@ const getData = async (location: string): Promise<string> => {
   throw new Error(`Could not determine if ${location} is a URL or file`);
 };
 
+
+const  validatingURLusingRegex = (locationString : string): Boolean => {
+    const regex = new RegExp('^https?:');
+   
+    if(regex.test(locationString)){
+      return true;
+    }
+
+    return false;
+}
 const pluginStoredData = (
   _: LoadContext,
   { data = {} }: Options,

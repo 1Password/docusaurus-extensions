@@ -1879,14 +1879,14 @@ __metadata:
   linkType: hard
 
 "@docusaurus/eslint-plugin@npm:^2.3.1":
-  version: 2.3.1
-  resolution: "@docusaurus/eslint-plugin@npm:2.3.1"
+  version: 2.4.1
+  resolution: "@docusaurus/eslint-plugin@npm:2.4.1"
   dependencies:
     "@typescript-eslint/utils": ^5.30.5
     tslib: ^2.4.0
   peerDependencies:
     eslint: ">=6"
-  checksum: cb577b459f982b41fcbd96c6379c6d1ea2b8ebaa3d5175a94da29c3bd374a4cbabb585ef00ccc0e78e92614a6a87b17580ac5835a99ec2659c3f0dbc25a82bff
+  checksum: 231a81eb01a8dfe1cba0d837567b4a2c100cb80f8bb1bef6dc0136b896c0cbbbf3325f58b11e77a0f36a872eb86c53d883a715e042342fd3d3687c824d9671af
   languageName: node
   linkType: hard
 

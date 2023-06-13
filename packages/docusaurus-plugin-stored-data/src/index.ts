@@ -48,7 +48,7 @@ const httpsPromise = (
 const getData = async (location: string): Promise<string> => {
   try {
     new URL(location); // will throw if invalid URL
-    if (validatingURLusingRegex(location)){
+    if (validateUrl(location)){
       const response = await httpsPromise(location);
       return response.body;
     }
@@ -84,14 +84,13 @@ const getData = async (location: string): Promise<string> => {
 };
 
 
-const  validatingURLusingRegex = (locationString : string): Boolean => {
-    const regex = new RegExp('^https?:');
-   
-    if(regex.test(locationString)){
-      return true;
-    }
-
+const  validateUrl = (locationString : string): Boolean => {
+   try {
+    const url = new URL(locationString);
+    return url.protocol === "http:" || url.protocol === "https:";
+  } catch {
     return false;
+  }
 }
 const pluginStoredData = (
   _: LoadContext,

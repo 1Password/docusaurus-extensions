@@ -15,7 +15,7 @@ __metadata:
     "@docusaurus/utils-validation": ^2.3.1
     "@types/jest": ^28.1.8
     "@types/node": ^18.11.17
-    "@types/react": ^18.0.25
+    "@types/react": ^18.2.0
     fast-xml-parser: ^4.0.11
     rimraf: ^3.0.2
     tslib: ^2.4.0
@@ -36,7 +36,7 @@ __metadata:
     "@docusaurus/types": ^2.3.1
     "@jest/types": ^29.4.1
     "@types/jest": ^28.1.8
-    "@types/react": ^18.0.25
+    "@types/react": ^18.2.0
     "@types/react-router-dom": ^5.3.3
     rimraf: ^3.0.2
     tslib: ^2.4.0
@@ -4814,7 +4814,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.0.25":
+"@types/react@npm:*":
   version: 18.0.25
   resolution: "@types/react@npm:18.0.25"
   dependencies:
@@ -4822,6 +4822,16 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: 231d658c45abdef044a716b4502774f1585d8336d73b2f5bd68f181acbfc874b7a457686ecd29b415b43ed0922c309bab7e2cf96832d188a3f4f1b02f2af760a
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^18.2.0":
+  version: 18.2.79
+  resolution: "@types/react@npm:18.2.79"
+  dependencies:
+    "@types/prop-types": "*"
+    csstype: ^3.0.2
+  checksum: 85aa96e0e88725c84d8fc5f04f10a4da6a1f507dde33557ac9cc211414756867721264bfefd9e02bae1288ce2905351d949b652b931e734ea24519ee5c625138
   languageName: node
   linkType: hard
 
@@ -8087,6 +8097,7 @@ __metadata:
     "@types/jest": ^28.1.8
     "@types/node": ^18.11.17
     "@types/prettier": ^2.7.1
+    "@types/react": ^18.2.0
     "@typescript-eslint/eslint-plugin": ^5.42.1
     "@typescript-eslint/parser": ^5.42.1
     concurrently: ^7.5.0

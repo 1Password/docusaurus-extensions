@@ -23,7 +23,6 @@ export const toCreateData = async (
 
   await plugin.contentLoaded!({
     content: content!,
-    allContent: {},
     actions,
   });
 

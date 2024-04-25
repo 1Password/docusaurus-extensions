@@ -47,10 +47,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@adobe/css-tools@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "@adobe/css-tools@npm:4.0.1"
-  checksum: 80226e2229024c21da9ffa6b5cd4a34b931f071e06f45aba4777ade071d7a6c94605cf73b13718b0c4b34e8b124c65c607b82eaa53a326d3eb73d9682a04a593
+"@adobe/css-tools@npm:^4.3.2":
+  version: 4.3.3
+  resolution: "@adobe/css-tools@npm:4.3.3"
+  checksum: d21f3786b84911fee59c995a146644a85c98692979097b26484ffa9e442fb1a92ccd68ce984e3e7cf8d5933c3560fbc0ad3e3cd1de50b9a723d1c012e793bbcb
   languageName: node
   linkType: hard
 
@@ -4597,20 +4597,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^5.16.5":
-  version: 5.16.5
-  resolution: "@testing-library/jest-dom@npm:5.16.5"
+"@testing-library/jest-dom@npm:^6.4.2":
+  version: 6.4.2
+  resolution: "@testing-library/jest-dom@npm:6.4.2"
   dependencies:
-    "@adobe/css-tools": ^4.0.1
+    "@adobe/css-tools": ^4.3.2
     "@babel/runtime": ^7.9.2
-    "@types/testing-library__jest-dom": ^5.9.1
     aria-query: ^5.0.0
     chalk: ^3.0.0
     css.escape: ^1.5.1
-    dom-accessibility-api: ^0.5.6
+    dom-accessibility-api: ^0.6.3
     lodash: ^4.17.15
     redent: ^3.0.0
-  checksum: 94911f901a8031f3e489d04ac057cb5373621230f5d92bed80e514e24b069fb58a3166d1dd86963e55f078a1bd999da595e2ab96ed95f452d477e272937d792a
+  peerDependencies:
+    "@jest/globals": ">= 28"
+    "@types/bun": "*"
+    "@types/jest": ">= 28"
+    jest: ">= 28"
+    vitest: ">= 0.32"
+  peerDependenciesMeta:
+    "@jest/globals":
+      optional: true
+    "@types/bun":
+      optional: true
+    "@types/jest":
+      optional: true
+    jest:
+      optional: true
+    vitest:
+      optional: true
+  checksum: 631aeadbf4e738080ae095242cf1a29a0b4ee2f09c8bdd0d3f00a923707da64c1617e088ba9a961d098481afabdc1d19149fb7ef98edf15132348eb222f345ae
   languageName: node
   linkType: hard
 
@@ -4872,16 +4888,6 @@ __metadata:
   dependencies:
     "@types/istanbul-lib-report": "*"
   checksum: f1ad54bc68f37f60b30c7915886b92f86b847033e597f9b34f2415acdbe5ed742fa559a0a40050d74cdba3b6a63c342cac1f3a64dba5b68b66a6941f4abd7903
-  languageName: node
-  linkType: hard
-
-"@types/jest@npm:*":
-  version: 29.2.2
-  resolution: "@types/jest@npm:29.2.2"
-  dependencies:
-    expect: ^29.0.0
-    pretty-format: ^29.0.0
-  checksum: 13b1a48858c8c451109c2838205fdcee6f41d672674d2f0e3cada35e94f133370aba4f4b5c3f5b174f3e16244d76d7d718afa7cc67d4d6f90d1b87951f4c87c3
   languageName: node
   linkType: hard
 
@@ -5167,15 +5173,6 @@ __metadata:
   version: 2.0.1
   resolution: "@types/stack-utils@npm:2.0.1"
   checksum: 205fdbe3326b7046d7eaf5e494d8084f2659086a266f3f9cf00bccc549c8e36e407f88168ad4383c8b07099957ad669f75f2532ed4bc70be2b037330f7bae019
-  languageName: node
-  linkType: hard
-
-"@types/testing-library__jest-dom@npm:^5.9.1":
-  version: 5.14.5
-  resolution: "@types/testing-library__jest-dom@npm:5.14.5"
-  dependencies:
-    "@types/jest": "*"
-  checksum: dcb05416758fe88c1f4f3aa97b4699fcb46a5ed8f53c6b81721e66155452a48caf12ecb97dfdfd4130678e65efd66b9fca0ac434b3d63affec84842a84a6bf38
   languageName: node
   linkType: hard
 
@@ -8455,7 +8452,7 @@ __metadata:
     "@1password/jest-docusaurus": "workspace:^"
     "@docusaurus/eslint-plugin": ^2.3.1
     "@jest/types": ^29.6.3
-    "@testing-library/jest-dom": ^5.16.5
+    "@testing-library/jest-dom": ^6.4.2
     "@types/eslint": ^7.29.0
     "@types/jest": ^29.5.12
     "@types/node": ^18.11.17
@@ -8494,10 +8491,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"dom-accessibility-api@npm:^0.5.6":
-  version: 0.5.14
-  resolution: "dom-accessibility-api@npm:0.5.14"
-  checksum: 782c813f75a09ba6735ef03b5e1624406a3829444ae49d5bdedd272a49d437ae3354f53e02ffc8c9fd9165880250f41546538f27461f839dd4ea1234e77e8d5e
+"dom-accessibility-api@npm:^0.6.3":
+  version: 0.6.3
+  resolution: "dom-accessibility-api@npm:0.6.3"
+  checksum: c325b5144bb406df23f4affecffc117dbaec9af03daad9ee6b510c5be647b14d28ef0a4ea5ca06d696d8ab40bb777e5fed98b985976fdef9d8790178fa1d573f
   languageName: node
   linkType: hard
 

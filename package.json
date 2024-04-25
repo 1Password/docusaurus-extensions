@@ -34,7 +34,7 @@
     "@1password/jest-docusaurus": "workspace:^",
     "@docusaurus/eslint-plugin": "^2.3.1",
     "@jest/types": "^29.6.3",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.4.2",
     "@types/eslint": "^7.29.0",
     "@types/jest": "^29.5.12",
     "@types/node": "^18.11.17",

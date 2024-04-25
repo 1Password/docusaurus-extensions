@@ -36,7 +36,7 @@
     "@jest/types": "^29.6.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@types/eslint": "^7.29.0",
-    "@types/jest": "^28.1.8",
+    "@types/jest": "^29.5.12",
     "@types/node": "^18.11.17",
     "@types/prettier": "^2.7.1",
     "@types/react": "^18.2.0",

@@ -4674,6 +4674,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/jest@npm:^29.5.12":
+  version: 29.5.12
+  resolution: "@types/jest@npm:29.5.12"
+  dependencies:
+    expect: ^29.0.0
+    pretty-format: ^29.0.0
+  checksum: 19b1efdeed9d9a60a81edc8226cdeae5af7479e493eaed273e01243891c9651f7b8b4c08fc633a7d0d1d379b091c4179bbaa0807af62542325fd72f2dd17ce1c
+  languageName: node
+  linkType: hard
+
 "@types/jsdom@npm:^20.0.0":
   version: 20.0.1
   resolution: "@types/jsdom@npm:20.0.1"
@@ -8120,7 +8130,7 @@ __metadata:
     "@jest/types": ^29.6.3
     "@testing-library/jest-dom": ^5.16.5
     "@types/eslint": ^7.29.0
-    "@types/jest": ^28.1.8
+    "@types/jest": ^29.5.12
     "@types/node": ^18.11.17
     "@types/prettier": ^2.7.1
     "@types/react": ^18.2.0

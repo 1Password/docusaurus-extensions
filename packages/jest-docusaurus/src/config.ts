@@ -15,7 +15,11 @@ export const createConfig = async ({
 
   // Load up the Docusaurus client Webpack config,
   // so we can extract its aliases
-  let webpackConfig = await createBaseConfig(props);
+  let webpackConfig = await createBaseConfig({
+    props,
+    isServer: true,
+    minify: true,
+  });
 
   // Allow plugins to make any final tweaks to the config
   for (const plugin of (props.plugins as Props["plugins"]).filter(

@@ -1,5 +1,4 @@
 import useStoredJson from "@theme/useStoredJson";
-import React from "react";
 
 const OpRepos = () => {
   const data = useStoredJson<

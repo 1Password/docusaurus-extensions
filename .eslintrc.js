@@ -51,6 +51,7 @@ module.exports = {
     "react/jsx-filename-extension": OFF,
     "react/jsx-props-no-spreading": OFF,
     "react/destructuring-assignment": OFF,
+    "react/react-in-jsx-scope": OFF,
     "react/require-default-props": [
       ERROR,
       { ignoreFunctionalComponents: true },

@@ -1,5 +1,4 @@
 import useStoredFeed from "@theme/useStoredFeed";
-import React from "react";
 
 const DevBlogPosts = () => {
   const data = useStoredFeed<{

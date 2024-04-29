@@ -1,15 +1,15 @@
 import { loadContext } from "@docusaurus/core/lib/server";
 import { loadHtmlTags } from "@docusaurus/core/lib/server/htmlTags";
-import type { LoadContext, LoadedPlugin } from "@docusaurus/types";
+import type { LoadContext, LoadedPlugin, Plugin } from "@docusaurus/types";
 import path from "path";
 
-export type LoadedPluginWithData = LoadedPlugin & {
+export type LoadedPluginWithData<TContent> = Plugin<TContent> & {
   document: HTMLHtmlElement;
   mockDataPath: string;
 };
 
-const createPluginDocument = (plugin: LoadedPlugin) => {
-  const htmlTags = loadHtmlTags([plugin]);
+const createPluginDocument = (plugin: Plugin<any>) => {
+  const htmlTags = loadHtmlTags([plugin] as LoadedPlugin[]);
   const container = document.createElement("html");
   container.innerHTML = `
     <head>
@@ -24,10 +24,13 @@ const createPluginDocument = (plugin: LoadedPlugin) => {
   return container;
 };
 
-export const loadPlugin = async <TOptions = Record<string, any>>(
-  plugin: (context: LoadContext, options: TOptions) => LoadedPlugin,
+export const loadPlugin = async <
+  TOptions = Record<string, any>,
+  TContent = null,
+>(
+  plugin: (context: LoadContext, options: TOptions) => Plugin<TContent>,
   options?: TOptions,
-): Promise<LoadedPluginWithData> => {
+): Promise<LoadedPluginWithData<TContent>> => {
   const siteDir = path.join(__dirname, "__fixtures__", "site");
   const context = await loadContext({ siteDir });
   const loadedPlugin = plugin(context, (options || {}) as TOptions);

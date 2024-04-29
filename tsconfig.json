@@ -39,7 +39,6 @@
     "noUnusedParameters": false,
     "importsNotUsedAsValues": "remove",
     /* Module Resolution */
-    "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

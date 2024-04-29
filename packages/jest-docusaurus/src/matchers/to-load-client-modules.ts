@@ -1,9 +1,9 @@
 import { loadClientModules } from "@docusaurus/core/lib/server/clientModules";
-import { Plugin } from "@docusaurus/types";
+import { LoadedPlugin } from "@docusaurus/types";
 import { createMissingPropertyResult, createResult } from "./utils";
 
 export const toLoadClientModules = (
-  plugin: Plugin,
+  plugin: LoadedPlugin,
   ...expectedModules: string[]
 ): jest.CustomMatcherResult => {
   if (!Object.hasOwn(plugin, "getClientModules")) {

@@ -1,5 +1,5 @@
 /* eslint-disable import/no-dynamic-require, global-require, @typescript-eslint/no-var-requires */
-import { createConfig } from "@1password/jest-docusaurus/config";
+import { createConfig } from "@1password/jest-docusaurus/src/config";
 import type { Config } from "@jest/types";
 import { resolve } from "path";
 

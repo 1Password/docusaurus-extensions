@@ -1,4 +1,7 @@
-import { LoadedPlugin, loadPlugin } from "@1password/jest-docusaurus/plugin";
+import {
+  LoadedPluginWithData,
+  loadPlugin,
+} from "@1password/jest-docusaurus/src/plugin";
 import { IncomingMessage } from "http";
 import https from "https";
 import pluginStoredData from ".";
@@ -30,7 +33,7 @@ jest.mock("https", () => ({
 }));
 
 describe("docusaurus-plugin-statuspage", () => {
-  let plugin: LoadedPlugin<Record<string, any>>;
+  let plugin: LoadedPluginWithData<Record<string, any>>;
 
   beforeEach(async () => {
     plugin = await loadPlugin(pluginStoredData, {

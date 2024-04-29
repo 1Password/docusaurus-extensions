@@ -2601,7 +2601,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.1.1":
+"@eslint/js@npm:9.1.1, @eslint/js@npm:^9.1.1":
   version: 9.1.1
   resolution: "@eslint/js@npm:9.1.1"
   checksum: b71844776d582de74a3599abcbccd2b9009a9292aaf81cb780469c9037985eb8c220c0a08708db205d7fecb54cf087c3c2b2066bd04819b1bc325fa72a52e3e0
@@ -8546,6 +8546,7 @@ __metadata:
   dependencies:
     "@1password/jest-docusaurus": "workspace:^"
     "@docusaurus/eslint-plugin": ^2.3.1
+    "@eslint/js": ^9.1.1
     "@jest/types": ^29.6.3
     "@testing-library/jest-dom": ^6.4.2
     "@types/eslint": ^8.56.10

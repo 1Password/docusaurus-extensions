@@ -1,7 +1,5 @@
-import {
-  LoadedPluginWithData,
-  loadPlugin,
-} from "@1password/jest-docusaurus/src/plugin";
+import type { LoadedPluginWithData } from "@1password/jest-docusaurus/plugin";
+import { loadPlugin } from "@1password/jest-docusaurus/plugin";
 import { IncomingMessage } from "http";
 import https from "https";
 import pluginStoredData from ".";

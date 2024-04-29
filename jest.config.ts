@@ -17,17 +17,17 @@ const prepareProjectConfig = async () => {
       setupFilesAfterEnv: [`${__dirname}/jest.setup.ts`],
       testEnvironment: "jsdom",
       transform: {
-        "^.+\\.[t|j]sx?$": "ts-jest",
+        "^.+\\.[t|j]sx?$": [
+          "ts-jest",
+          {
+            isolatedModules: true,
+          },
+        ],
       },
       moduleNameMapper: {
         "^.+\\.(jpg|jpeg|png|svg)$": "<rootDir>/fileMock.js",
         "^.+\\.(css|scss)$": "identity-obj-proxy",
         ...docusaurusConfig.moduleNameMapper,
-      },
-      globals: {
-        "ts-jest": {
-          isolatedModules: true,
-        },
       },
       transformIgnorePatterns: [".yarn/__virtual__/(?!@docusaurus.*)"],
     };

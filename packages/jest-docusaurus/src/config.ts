@@ -1,5 +1,5 @@
-import { load } from "@docusaurus/core/lib/server";
-import createClientConfig from "@docusaurus/core/lib/webpack/client";
+import { loadSite } from "@docusaurus/core/lib/server/site";
+import { createBaseConfig } from "@docusaurus/core/lib/webpack/base";
 import { applyConfigureWebpack } from "@docusaurus/core/lib/webpack/utils";
 import type { Props } from "@docusaurus/types";
 import type { Config } from "@jest/types";
@@ -9,13 +9,17 @@ export const createConfig = async ({
 }: {
   siteDir?: string;
 } = {}): Promise<Config.InitialOptions> => {
-  const props = await load({
+  const { props } = await loadSite({
     siteDir,
   });
 
   // Load up the Docusaurus client Webpack config,
   // so we can extract its aliases
-  let webpackConfig = await createClientConfig(props);
+  let webpackConfig = await createBaseConfig({
+    props,
+    isServer: true,
+    minify: true,
+  });
 
   // Allow plugins to make any final tweaks to the config
   for (const plugin of (props.plugins as Props["plugins"]).filter(

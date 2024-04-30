@@ -22,7 +22,6 @@ export const toAddRoutes = async (
 
   await plugin.contentLoaded!({
     content: content!,
-    allContent: {},
     actions,
   });
 

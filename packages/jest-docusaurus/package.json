@@ -1,7 +1,7 @@
 {
   "name": "@1password/jest-docusaurus",
   "description": "Jest helpers for developing with Docusaurus",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "1Password <support@1password.com>",
   "repository": {
     "url": "https://github.com/1Password/docusaurus-extensions.git",
@@ -21,21 +21,21 @@
     "watch": "tsc --build --watch --preserveWatchOutput"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.3.1"
+    "@docusaurus/core": "^3.2.1"
   },
   "devDependencies": {
-    "@docusaurus/theme-classic": "^2.3.1",
-    "@docusaurus/types": "^2.3.1",
-    "@jest/types": "^29.4.1",
-    "@types/jest": "^28.1.8",
-    "@types/react": "^18.0.25",
+    "@docusaurus/theme-classic": "^3.2.1",
+    "@docusaurus/types": "^3.2.1",
+    "@jest/types": "^29.6.3",
+    "@types/jest": "^29.5.12",
+    "@types/react": "^18.2.0",
     "@types/react-router-dom": "^5.3.3",
     "rimraf": "^3.0.2",
     "tslib": "^2.4.0",
-    "typescript": "^4.7.4"
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^16.8.4 || ^17.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

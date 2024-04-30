@@ -1,5 +1,5 @@
 /* eslint-disable import/no-dynamic-require, global-require, @typescript-eslint/no-var-requires */
-import { createConfig } from "@1password/jest-docusaurus/config";
+import { createConfig } from "@1password/jest-docusaurus/src/config";
 import type { Config } from "@jest/types";
 import { resolve } from "path";
 
@@ -17,17 +17,17 @@ const prepareProjectConfig = async () => {
       setupFilesAfterEnv: [`${__dirname}/jest.setup.ts`],
       testEnvironment: "jsdom",
       transform: {
-        "^.+\\.[t|j]sx?$": "ts-jest",
+        "^.+\\.[t|j]sx?$": [
+          "ts-jest",
+          {
+            isolatedModules: true,
+          },
+        ],
       },
       moduleNameMapper: {
         "^.+\\.(jpg|jpeg|png|svg)$": "<rootDir>/fileMock.js",
         "^.+\\.(css|scss)$": "identity-obj-proxy",
         ...docusaurusConfig.moduleNameMapper,
-      },
-      globals: {
-        "ts-jest": {
-          isolatedModules: true,
-        },
       },
       transformIgnorePatterns: [".yarn/__virtual__/(?!@docusaurus.*)"],
     };

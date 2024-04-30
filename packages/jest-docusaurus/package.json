@@ -1,7 +1,7 @@
 {
   "name": "@1password/jest-docusaurus",
   "description": "Jest helpers for developing with Docusaurus",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "1Password <support@1password.com>",
   "repository": {
     "url": "https://github.com/1Password/docusaurus-extensions.git",

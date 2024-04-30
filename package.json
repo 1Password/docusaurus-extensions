@@ -1,7 +1,7 @@
 {
   "name": "docusaurus-extensions",
   "description": "A collection of Docusaurus extensions",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "1Password <support@1password.com>",
   "repository": "1password/docusaurus-extensions.git",
   "license": "MIT",

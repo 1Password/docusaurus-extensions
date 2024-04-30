@@ -1,7 +1,7 @@
 {
   "name": "@1password/docusaurus-plugin-stored-data",
   "description": "Load local or external data to be used in Docusaurus",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "1Password <support@1password.com>",
   "repository": {
     "url": "https://github.com/1Password/docusaurus-extensions.git",

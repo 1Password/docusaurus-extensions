@@ -1,5 +1,5 @@
 import { getAllClientModules } from "@docusaurus/core/lib/server/clientModules";
-import { Plugin } from "@docusaurus/types";
+import { LoadedPlugin, Plugin } from "@docusaurus/types";
 import { createMissingPropertyResult, createResult } from "./utils";
 
 export const toLoadClientModules = (
@@ -10,7 +10,7 @@ export const toLoadClientModules = (
     return createMissingPropertyResult("getClientModules");
   }
 
-  const modules = getAllClientModules([plugin]);
+  const modules = getAllClientModules([plugin] as LoadedPlugin[]);
   const remaining = expectedModules.filter(
     (e) => !modules.some((m) => new RegExp(`${e}$`).test(m)),
   );

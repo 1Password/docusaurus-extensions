@@ -21,11 +21,11 @@
     "watch": "tsc --build --watch --preserveWatchOutput"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.3.1"
+    "@docusaurus/core": "^3.2.1"
   },
   "devDependencies": {
-    "@docusaurus/theme-classic": "^2.3.1",
-    "@docusaurus/types": "^2.3.1",
+    "@docusaurus/theme-classic": "^3.2.1",
+    "@docusaurus/types": "^3.2.1",
     "@jest/types": "^29.6.3",
     "@types/jest": "^29.5.12",
     "@types/react": "^18.2.0",

@@ -1,5 +1,5 @@
-import { loadContext } from "@docusaurus/core/lib/server";
 import { loadHtmlTags } from "@docusaurus/core/lib/server/htmlTags";
+import { loadContext } from "@docusaurus/core/lib/server/site";
 import type { LoadContext, LoadedPlugin, Plugin } from "@docusaurus/types";
 import path from "path";
 

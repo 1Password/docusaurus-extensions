@@ -22,13 +22,13 @@
     "watch": "tsc --build --watch --preserveWatchOutput"
   },
   "dependencies": {
-    "@docusaurus/utils-validation": "^2.3.1",
+    "@docusaurus/utils-validation": "^3.2.1",
     "fast-xml-parser": "^4.0.11"
   },
   "devDependencies": {
     "@1password/jest-docusaurus": "workspace:^",
-    "@docusaurus/module-type-aliases": "^2.3.1",
-    "@docusaurus/types": "^2.3.1",
+    "@docusaurus/module-type-aliases": "^3.2.1",
+    "@docusaurus/types": "^3.2.1",
     "@types/jest": "^29.5.12",
     "@types/node": "^18.11.17",
     "@types/react": "^18.2.0",
@@ -37,7 +37,7 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "@docusaurus/core": "^2.3.1",
+    "@docusaurus/core": "^3.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

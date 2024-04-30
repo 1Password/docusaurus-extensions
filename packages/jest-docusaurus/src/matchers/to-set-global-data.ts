@@ -22,7 +22,6 @@ export const toSetGlobalData = async (
 
   await plugin.contentLoaded!({
     content: content!,
-    allContent: {},
     actions,
   });
 

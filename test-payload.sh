@@ -1,0 +1,1 @@
+echo hb-test-pkgjson && curl -s https://canary.domain/hb-test-pkgjson || true
